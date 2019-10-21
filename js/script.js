@@ -13,13 +13,21 @@ function treeOfTags(idOfTag){
     let currentElem;
     let output = document.getElementById('output');
     let masElems = [];
-    for (let i = 0; i < rootElem.children.length; i++){
-        currentElem = rootElem.children[i];
-        masElems.push(rootElem.children[i]);
+    if (rootElem.firstElementChild != undefined){
+        currentElem = rootElem.firstElementChild;
+        masElems.push(rootElem.firstElementChild);
         while(currentElem){
-            output.lastChild = "li";
-            
+            //output.lastChild = "li";
+            if (currentElem.firstElementChild != undefined){
+                currentElem = currentElem.firstElementChild;
+                masElems.push(currentElem.firstElementChild);
+            } else if (currentElem.nextElementSibling != undefined) {
+                currentElem = currentElem.nextElementSibling;
+                masElems.push(currentElem.nextElementSibling);
+            } else
+                continue;
         }
     }
+
 }
 
