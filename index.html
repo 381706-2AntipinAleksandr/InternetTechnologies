@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Antipin A, option 22</title>
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body id="body">
-    <section>
-        <button onclick="treeOfTags('section2')">нажми сюда</button>
-        <div id="output"></div>
+    <section class="firstSection">
+        <div class="titleAndButton">
+            <div>В данной секции появится схема элементов следующей секции</div>
+            <button onclick="treeOfTags('section2')">нажми сюда</button>
+        </div>
+        <div class="output" id="output"></div>
     </section>
-    <section id="section2">
+    <section class="secondSection" id="section2">
         <ul id="1">
             <li id="1.1">1some text 1</li>
             <li id="1.2">1some text 2</li>
@@ -27,9 +31,17 @@
             <li id="3.2">3some text 2</li>
             <li id="3.3">3some text 3</li>
         </ul>
-    </section>
-    <section>
-        
+        <ul id="4">
+            <li id="4.1">
+                <ul>
+                    <li>3some text 1</li>
+                    <li>3some text 2</li>
+                    <li>3some text 3</li>
+                </ul>
+            </li>
+            <li id="4.2">3some text 2</li>
+            <li id="4.3">3some text 3</li>
+        </ul>
     </section>
     <script src="js/script.js"></script>
 </body>
